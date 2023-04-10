@@ -1,0 +1,14 @@
+MQ135 gasSensor = MQ135(A0);
+float air_quality = gasSensor.getPPM();
+#include<MQ135.h>
+void setup ()
+{
+Serial.begin (9600);
+}
+void loop() 
+{
+MQ135 gasSensor = MQ135(A3); 
+float rzero = gasSensor.getRZero();
+Serial.println (rzero);
+delay(1000);
+}
